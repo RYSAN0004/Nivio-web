@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NIVIO — Technology That Helps Students Learn, Focus and Achieve More</title>
+<meta name="title" content="NIVIO — Technology That Helps Students Learn, Focus and Achieve More">
+<meta name="description" content="NIVIO builds affordable, high-quality educational and productivity software — Omniverse, Focuz and StayOn — designed to help students learn, focus and achieve more.">
+<meta name="keywords" content="NIVIO, Omniverse, Focuz, StayOn, JEE, NEET, study app, focus app, productivity software, educational technology, student software">
+<meta name="author" content="Adiitya Goswami (Rysan)">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#050505">
+<link rel="canonical" href="https://nivio.tech/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nivio.tech/">
+<meta property="og:title" content="NIVIO — Technology That Helps Students Learn, Focus and Achieve More">
+<meta property="og:description" content="Affordable, high-quality educational and productivity software for students. Explore Omniverse, Focuz and StayOn.">
+<meta property="og:image" content="https://nivio.tech/assets/images/og-cover.png">
+<meta property="og:site_name" content="NIVIO">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://nivio.tech/">
+<meta name="twitter:title" content="NIVIO — Technology That Helps Students Learn, Focus and Achieve More">
+<meta name="twitter:description" content="Affordable, high-quality educational and productivity software for students. Explore Omniverse, Focuz and StayOn.">
+<meta name="twitter:image" content="https://nivio.tech/assets/images/og-cover.png">
+
+<!-- Icons / Manifest -->
+<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<!-- Preconnect / Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NIVIO",
+  "url": "https://nivio.tech/",
+  "logo": "https://nivio.tech/assets/icons/favicon.svg",
+  "foundingDate": "2023",
+  "founder": {
+    "@type": "Person",
+    "name": "Adiitya Goswami",
+    "alternateName": "Rysan"
+  },
+  "location": {
+    "@type": "Place",
+    "address": "Uttar Pradesh, India"
+  },
+  "sameAs": ["https://instagram.com/_adiityagoswami"],
+  "email": "iamrysan@gmail.com"
+}
+</script>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="loader-path" d="M8 40V12L26 34L44 12V40" stroke="url(#loaderGrad)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <defs>
+        <linearGradient id="loaderGrad" x1="8" y1="12" x2="44" y2="40" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#3E8BFF"/>
+          <stop offset="1" stop-color="#7FB4FF"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+</div>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress" role="presentation"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <nav class="nav-inner" aria-label="Primary">
+    <a href="#home" class="nav-logo" aria-label="NIVIO home">
+      <svg width="28" height="28" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M8 40V12L26 34L44 12V40" stroke="url(#navGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="navGrad" x1="8" y1="12" x2="44" y2="40" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3E8BFF"/>
+            <stop offset="1" stop-color="#7FB4FF"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span>NIVIO</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
+      <li><a href="#about" class="nav-link" data-nav>About</a></li>
+      <li><a href="#products" class="nav-link" data-nav>Products</a></li>
+      <li><a href="#founder" class="nav-link" data-nav>Founder</a></li>
+      <li><a href="#vision" class="nav-link" data-nav>Vision</a></li>
+      <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+    </ul>
+
+    <div class="nav-indicator" id="navIndicator" aria-hidden="true"></div>
+
+    <a href="#contact" class="btn btn-nav">Get in touch</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" data-nav-mobile>Home</a>
+    <a href="#about" data-nav-mobile>About</a>
+    <a href="#products" data-nav-mobile>Products</a>
+    <a href="#founder" data-nav-mobile>Founder</a>
+    <a href="#vision" data-nav-mobile>Vision</a>
+    <a href="#contact" data-nav-mobile>Contact</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <canvas id="particleCanvas"></canvas>
+      <div class="aurora aurora-1"></div>
+      <div class="aurora aurora-2"></div>
+      <div class="grid-overlay"></div>
+      <div class="hero-glow"></div>
+    </div>
+
+    <div class="hero-content container">
+      <div class="hero-badge reveal" data-reveal>
+        <span class="dot-pulse"></span>
+        Building the future of student software
+      </div>
+
+      <div class="hero-logo reveal" data-reveal data-delay="80">
+        <svg width="72" height="72" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 40V12L26 34L44 12V40" stroke="url(#heroGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="heroGrad" x1="8" y1="12" x2="44" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#3E8BFF"/>
+              <stop offset="1" stop-color="#9DC5FF"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <h1 class="hero-title reveal" data-reveal data-delay="140">NIVIO</h1>
+
+      <p class="hero-tagline reveal" data-reveal data-delay="200">
+        Building technology that helps students learn, focus and achieve more.
+      </p>
+
+      <p class="hero-subtitle reveal" data-reveal data-delay="260">
+        We build innovative educational and productivity software designed to empower students
+        with accessible, distraction-free digital experiences.
+      </p>
+
+      <div class="hero-actions reveal" data-reveal data-delay="320">
+        <a href="#products" class="btn btn-primary magnetic">
+          <span>Explore Products</span>
+        </a>
+        <a href="#contact" class="btn btn-secondary magnetic">
+          <span>Contact</span>
+        </a>
+      </div>
+    </div>
+
+    <button class="scroll-indicator" id="scrollIndicator" aria-label="Scroll to About section">
+      <span class="scroll-mouse"><span class="scroll-dot"></span></span>
+      <span class="scroll-text">Scroll</span>
+    </button>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal" data-reveal>
+        <span class="eyebrow">About NIVIO</span>
+        <h2>Software built with students at the center</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal" data-reveal>
+          <div class="about-stat-row">
+            <div class="stat-block">
+              <span class="stat-number" data-counter data-target="2023" data-format="year">0</span>
+              <span class="stat-label">Founded</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-block">
+              <span class="stat-text">Uttar Pradesh, India</span>
+              <span class="stat-label">Headquarters</span>
+            </div>
+          </div>
+
+          <div class="about-block">
+            <h3>Mission</h3>
+            <p>To create affordable, high-quality educational and productivity software that empowers every student regardless of financial background.</p>
+          </div>
+
+          <div class="about-block">
+            <h3>Vision</h3>
+            <p>To make world-class learning and focus tools accessible to every learner.</p>
+          </div>
+        </div>
+
+        <div class="about-visual reveal" data-reveal data-delay="120" aria-hidden="true">
+          <div class="orbit-card">
+            <div class="orbit-ring orbit-ring-1"></div>
+            <div class="orbit-ring orbit-ring-2"></div>
+            <div class="orbit-core">
+              <svg width="40" height="40" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 40V12L26 34L44 12V40" stroke="url(#aboutGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="aboutGrad" x1="8" y1="12" x2="44" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#3E8BFF"/>
+                    <stop offset="1" stop-color="#9DC5FF"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section-header reveal" data-reveal>
+        <span class="eyebrow">Products</span>
+        <h2>Everything we're building</h2>
+        <p class="section-desc">A growing ecosystem of tools designed to help students learn better, focus deeper and stay on track.</p>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card reveal" data-reveal data-product="omniverse" tabindex="0">
+          <div class="product-card-glow"></div>
+          <div class="product-status status-live">LIVE</div>
+          <div class="product-logo">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M3 12h18M12 3c2.5 2.7 3.8 6 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-6-3.8-9s1.3-6.3 3.8-9z" stroke="currentColor" stroke-width="1.4"/>
+            </svg>
+          </div>
+          <h3>Omniverse</h3>
+          <p>A dedicated learning platform built specifically for JEE and NEET aspirants — organized resources and tools for students who can't afford expensive coaching.</p>
+          <button class="btn btn-card" data-open-modal="omniverse">
+            <span>Coming Soon</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </article>
+
+        <article class="product-card reveal" data-reveal data-delay="100" data-product="focuz" tabindex="0">
+          <div class="product-card-glow"></div>
+          <div class="product-status status-beta">BETA</div>
+          <div class="product-logo">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="12" cy="12" r="1.2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Focuz</h3>
+          <p>A productivity app that helps students build consistent study habits through smart focus sessions, timers, progress tracking and distraction-reduction tools.</p>
+          <button class="btn btn-card" data-open-modal="focuz">
+            <span>Coming Soon</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </article>
+
+        <article class="product-card reveal" data-reveal data-delay="200" data-product="stayon" tabindex="0">
+          <div class="product-card-glow"></div>
+          <div class="product-status status-beta">BETA</div>
+          <div class="product-logo">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="5" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M10 9.5l4.5 2.5L10 14.5v-5z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>StayOn</h3>
+          <p>Designed for students who rely on YouTube for learning — StayOn reduces interruptions and supports a more focused learning experience.</p>
+          <button class="btn btn-card" data-open-modal="stayon">
+            <span>Coming Soon</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why NIVIO -->
+  <section class="section why">
+    <div class="container">
+      <div class="section-header reveal" data-reveal>
+        <span class="eyebrow">Why NIVIO</span>
+        <h2>Built differently, on purpose</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal" data-reveal>
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.7 5.9L21 9.8l-4.5 4.2 1.1 6.5L12 17.3l-5.6 3.2 1.1-6.5L3 9.8l6.3-.9L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <h3>Student First</h3>
+          <p>Every decision is made with students' real needs in mind.</p>
+        </div>
+        <div class="why-card reveal" data-reveal data-delay="60">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5.5c0-1.7-2.2-3-5-3s-5 1.3-5 3 2.2 3 5 3 5 1.3 5 3-2.2 3-5 3-5-1.3-5-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3>Affordable</h3>
+          <p>Quality tools shouldn't be locked behind a paywall few can afford.</p>
+        </div>
+        <div class="why-card reveal" data-reveal data-delay="120">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3>Modern Design</h3>
+          <p>Clean, thoughtful interfaces that feel effortless to use.</p>
+        </div>
+        <div class="why-card reveal" data-reveal>
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <h3>Privacy Focused</h3>
+          <p>Your data stays yours. Always designed with privacy in mind.</p>
+        </div>
+        <div class="why-card reveal" data-reveal data-delay="60">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3M4 6v4h4M20 18v-4h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Continuous Updates</h3>
+          <p>We ship improvements constantly based on real feedback.</p>
+        </div>
+        <div class="why-card reveal" data-reveal data-delay="120">
+          <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <h3>Reliable Performance</h3>
+          <p>Fast, stable software that works when students need it most.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder -->
+  <section class="section founder" id="founder">
+    <div class="container">
+      <div class="founder-grid">
+        <div class="founder-visual reveal" data-reveal>
+          <div class="founder-photo-wrap">
+            <div class="founder-photo" role="img" aria-label="Adiitya Goswami, founder of NIVIO">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none"><path d="M12 12a4.5 4.5 0 100-9 4.5 4.5 0 000 9zM4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <div class="founder-glow"></div>
+          </div>
+        </div>
+
+        <div class="founder-copy reveal" data-reveal data-delay="100">
+          <span class="eyebrow">Founder</span>
+          <h2>Adiitya Goswami</h2>
+          <p class="founder-alias">Known online as <strong>Rysan</strong> · Uttar Pradesh, India</p>
+          <p class="founder-bio">Adiitya Goswami, known online as Rysan, is the founder of NIVIO. His goal is to build practical software that makes studying more accessible, productive and efficient for students, with a strong focus on educational technology and productivity solutions.</p>
+
+          <div class="founder-socials">
+            <a href="https://instagram.com/_adiityagoswami" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="mailto:iamrysan@gmail.com" class="social-btn" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 6.5L12 13l8.5-6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section timeline-section">
+    <div class="container">
+      <div class="section-header reveal" data-reveal>
+        <span class="eyebrow">Journey</span>
+        <h2>Our story so far</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"><div class="timeline-line-fill" id="timelineFill"></div></div>
+
+        <div class="timeline-item reveal" data-reveal>
+          <div class="timeline-dot"></div>
+          <div class="timeline-card"><span class="timeline-year">2023</span><h3>NIVIO Founded</h3></div>
+        </div>
+        <div class="timeline-item reveal" data-reveal data-delay="80">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card"><h3>First Software Projects</h3></div>
+        </div>
+        <div class="timeline-item reveal" data-reveal data-delay="160">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card"><h3>Omniverse</h3><span class="timeline-tag">Live</span></div>
+        </div>
+        <div class="timeline-item reveal" data-reveal data-delay="240">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card"><h3>Focuz</h3><span class="timeline-tag">Beta</span></div>
+        </div>
+        <div class="timeline-item reveal" data-reveal data-delay="320">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card"><h3>StayOn</h3><span class="timeline-tag">Beta</span></div>
+        </div>
+        <div class="timeline-item reveal" data-reveal data-delay="400">
+          <div class="timeline-dot timeline-dot-future"></div>
+          <div class="timeline-card"><h3>Future AI Ecosystem</h3><span class="timeline-tag timeline-tag-future">What's next</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section class="section vision" id="vision">
+    <div class="container">
+      <div class="section-header reveal" data-reveal>
+        <span class="eyebrow">Future Vision</span>
+        <h2>What we're building toward</h2>
+        <p class="section-desc">NIVIO is just getting started. Here's where we're headed.</p>
+      </div>
+
+      <div class="vision-grid">
+        <div class="vision-card reveal" data-reveal>
+          <span class="vision-index">01</span>
+          <h3>AI-Powered Educational Tools</h3>
+          <p>Intelligent systems that adapt to how each student learns best.</p>
+        </div>
+        <div class="vision-card reveal" data-reveal data-delay="80">
+          <span class="vision-index">02</span>
+          <h3>Learning Ecosystem</h3>
+          <p>A connected suite of products that work seamlessly together.</p>
+        </div>
+        <div class="vision-card reveal" data-reveal data-delay="160">
+          <span class="vision-index">03</span>
+          <h3>Student Productivity Suite</h3>
+          <p>Tools that help students manage time, focus and workload.</p>
+        </div>
+        <div class="vision-card reveal" data-reveal data-delay="240">
+          <span class="vision-index">04</span>
+          <h3>Cross-Platform Applications</h3>
+          <p>Consistent experiences across web, mobile and desktop.</p>
+        </div>
+        <div class="vision-card reveal" data-reveal data-delay="320">
+          <span class="vision-index">05</span>
+          <h3>Global Accessibility</h3>
+          <p>Breaking down cost and access barriers for learners everywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq">
+    <div class="container container-narrow">
+      <div class="section-header reveal" data-reveal>
+        <span class="eyebrow">FAQ</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+
+      <div class="accordion" id="accordion">
+        <div class="accordion-item reveal" data-reveal>
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>What is NIVIO?</span>
+            <svg class="accordion-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="accordion-panel"><p>NIVIO is a software company building educational and productivity tools designed to help students learn, focus and achieve more.</p></div>
+        </div>
+
+        <div class="accordion-item reveal" data-reveal>
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>What products does NIVIO offer?</span>
+            <svg class="accordion-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="accordion-panel"><p>Currently three products: Omniverse (JEE/NEET learning platform), Focuz (a focus and productivity app) and StayOn (a distraction-reduction tool for YouTube learning).</p></div>
+        </div>
+
+        <div class="accordion-item reveal" data-reveal>
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Is Omniverse available now?</span>
+            <svg class="accordion-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="accordion-panel"><p>Omniverse is marked LIVE. Public access details are shared through our official channels as they're rolled out.</p></div>
+        </div>
+
+        <div class="accordion-item reveal" data-reveal>
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Are Focuz and StayOn free?</span>
+            <svg class="accordion-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="accordion-panel"><p>Affordability is core to NIVIO's mission. Pricing details for each product will be announced closer to launch.</p></div>
+        </div>
+
+        <div class="accordion-item reveal" data-reveal>
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Who is behind NIVIO?</span>
+            <svg class="accordion-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="accordion-panel"><p>NIVIO was founded by Adiitya Goswami (Rysan), based in Uttar Pradesh, India, with a focus on educational technology and student productivity.</p></div>
+        </div>
+
+        <div class="accordion-item reveal" data-reveal>
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>How do I get updates about new releases?</span>
+            <svg class="accordion-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="accordion-panel"><p>Follow NIVIO on Instagram or reach out via email — announcements are shared there first.</p></div>
+        </div>
+
+        <div class="accordion-item reveal" data-reveal>
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Does NIVIO collect or sell my data?</span>
+            <svg class="accordion-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="accordion-panel"><p>Privacy is a founding principle at NIVIO. Our products are built to minimize data collection and never sell user data.</p></div>
+        </div>
+
+        <div class="accordion-item reveal" data-reveal>
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Can I suggest a feature or report an issue?</span>
+            <svg class="accordion-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="accordion-panel"><p>Absolutely — reach out via the contact form below or email iamrysan@gmail.com directly. We read every message.</p></div>
+        </div>
+
+        <div class="accordion-item reveal" data-reveal>
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>What's next for NIVIO?</span>
+            <svg class="accordion-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="accordion-panel"><p>We're working toward an AI-powered learning ecosystem — a connected suite of tools spanning learning, focus and productivity across every platform.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal" data-reveal>
+          <span class="eyebrow">Contact</span>
+          <h2>Let's build something together</h2>
+          <p>Have a question, feedback or partnership idea? We'd love to hear from you.</p>
+
+          <div class="contact-details">
+            <a href="mailto:iamrysan@gmail.com" class="contact-detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 6.5L12 13l8.5-6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>iamrysan@gmail.com</span>
+            </a>
+            <a href="https://instagram.com/_adiityagoswami" target="_blank" rel="noopener noreferrer" class="contact-detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+              <span>@_adiityagoswami</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" data-reveal data-delay="100" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full magnetic">
+            <span id="submitText">Send Message</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <svg width="26" height="26" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 40V12L26 34L44 12V40" stroke="url(#footerGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="footerGrad" x1="8" y1="12" x2="44" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#3E8BFF"/><stop offset="1" stop-color="#7FB4FF"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>NIVIO</span>
+        </a>
+        <p>Building technology that helps students learn, focus and achieve more.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#founder">Founder</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Social</h4>
+        <a href="https://instagram.com/_adiityagoswami" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:iamrysan@gmail.com">Email</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#" id="openPrivacy">Privacy Policy</a>
+        <a href="#" id="openTerms">Terms &amp; Conditions</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2023–2026 NIVIO. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 14V4M4 9l5-5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<!-- Product Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal-icon" id="modalIcon"></div>
+    <span class="modal-status" id="modalStatus"></span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <button class="btn btn-secondary btn-full" id="modalNotify">Notify Me</button>
+  </div>
+</div>
+
+<!-- Legal Modal -->
+<div class="modal-overlay" id="legalOverlay">
+  <div class="modal modal-legal" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+    <button class="modal-close" id="legalClose" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <h3 id="legalTitle"></h3>
+    <div class="modal-legal-body" id="legalBody"></div>
+  </div>
+</div>
+
+<script src="/js/script.js" defer></script>
+</body>
+</html>
